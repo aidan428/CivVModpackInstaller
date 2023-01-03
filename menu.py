@@ -30,7 +30,8 @@ def menu_handler():
             print(Fore.RED + 'Error detecting option. Did you enter a number?' + Style.RESET_ALL)
         #Check what choice was entered and act accordingly
         if option == 1:
-            print("\n")
+            #print("\n")
+            welcome.clear_screen()
             print_results()
             check_status()
         elif option == 2:

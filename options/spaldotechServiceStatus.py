@@ -57,7 +57,7 @@ def api_check():
 
 def vision_check():
     domain = "vision.spaldotech.co.uk"
-    url = "https://vision.spaldotech.co.uk/robots.txt"
+    url = "https://vision.spaldotech.co.uk/.robots.txt"
     save_as = "temp/VisionRobot.txt"
 
     try:
@@ -72,7 +72,7 @@ def vision_check():
 
 def repo_check():
     domain = "repo.spaldotech.co.uk"
-    url = "https://repo.spaldotech.co.uk/robots.txt"
+    url = "https://repo.spaldotech.co.uk/ModpackMenuResources/version.txt"
     save_as = "temp/RepoRobot.txt"
 
     try:
