@@ -46,5 +46,5 @@ def menu_handler():
             sleep(2)
             quit()
         else:
-            print(Fore.RED + 'Invalid option. Please enter a number between 1 and 6.' + Style.RESET_ALL)
+            print(Fore.RED + 'Invalid option. Please enter a number between 0 and 3.' + Style.RESET_ALL)
             print("\n")

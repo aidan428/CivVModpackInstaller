@@ -6,7 +6,7 @@ from colorama import Fore, Back, Style
 
 
 def uninstall_modpack():
-    civ_path = str(get_civ_dir()) + "\Assets\DLC\MP_MODSPACK"
+    civ_path = str(get_civ_dir()) + "\Assets\DLC\LEKMOD"
     exists = os.path.exists(civ_path)
 
     try:

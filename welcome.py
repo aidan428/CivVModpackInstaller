@@ -1,5 +1,6 @@
 import os
 from colorama import Fore, Back, Style
+from playsound import playsound
 import click
 import menu
 
@@ -45,6 +46,10 @@ def back_to_menu():
   print(Fore.YELLOW + "Simply choose an option below by typing the menu number and pressing enter." + Style.RESET_ALL)
   print("\n")
 
+def intro_music():
+  playsound('assets/welcome.mp3')
+
 def generate_welcome():
   clear_screen()
   print_art()
+  intro_music()
