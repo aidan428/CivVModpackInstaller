@@ -85,6 +85,21 @@ def repo_check():
         statusStr = domain + "           "+ Fore.RED + "OFFLINE" + Style.RESET_ALL
     print(statusStr)
 
+def mods_check():
+    domain = "mods.spaldotech.co.uk"
+    url = "https://mods.spaldotech.co.uk/robots.txt"
+    save_as = "temp/ModsRobot.txt"
+
+    try:
+        with urlopen(url) as file:
+            content = file.read().decode()
+        with open(save_as, "w") as download:
+            download.write(content)
+        statusStr = domain + "           "+ Fore.GREEN + "ONLINE" + Style.RESET_ALL
+    except Exception as e:
+        statusStr = domain + "           "+ Fore.RED + "OFFLINE" + Style.RESET_ALL
+    print(statusStr)
+
 
 def check_status():
     print(Fore.YELLOW + "Checking Spaldotech Service Status..." + Style.RESET_ALL)
@@ -93,15 +108,13 @@ def check_status():
     prepare_env()
     sleep(1)
     root_check()
-    sleep(3)
     api_check()
-    sleep(3)
     repo_check()
-    sleep(3)
     vision_check()
-    sleep(3)
+    mods_check()
     print("\n" + Fore.YELLOW + "Please check service status above. If there are any offline, please contact the system administrator." + Style.RESET_ALL)
     print("\n")
+    sleep(2)
     check_env()
 
 
