@@ -13,7 +13,8 @@ import shutil
 
 download_link = r"https://repo.spaldotech.co.uk/Civ/LEKMOD_v31.3.zip"
 admin_url = r"https://repo.spaldotech.co.uk/Civ/LEKMOD_v31.3_IGE.zip"
-file_name = "LEKMOD_v31.3.zip"
+#file_name = "LEKMOD_v31.3.zip"
+file_name = ''
 admin_file_name = "LEKMOD_v31.3_IGE.zip"
 
 
@@ -77,7 +78,6 @@ def download_modpack():
     return filename
 
 def download_admin_modpack():
-
     buffer_size = 1024
     response = requests.get(admin_url, stream=True)
     file_size = int(response.headers.get("Content-Length", 0))
@@ -126,7 +126,7 @@ def install_modpack():
         #file_name == admin_url.split("/")[-1]
         print("Current admin modpack is " + admin_file_name)
         sleep(3)
-        filename = download_admin_modpack()
+        file_name = download_admin_modpack()
         #file_name = admin_file_name
     else:
         file_name = download_modpack()
@@ -144,16 +144,13 @@ def install_modpack():
         print(download_link)
         print(Fore.RED + "Failed to install. Please contact Mr Spalding and show him the above error trace." + Style.RESET_ALL)
 
-    cleanup()
-
-def cleanup():
     try:
         os.remove(file_name)
     except:
         print("Unable to remove installer files!")
     
 
-
+#Purged cleanup function
         
         
 
