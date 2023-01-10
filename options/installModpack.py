@@ -28,6 +28,7 @@ def check_env():
                 quit()
             except Exception as e:
                 print(Fore.RED + "Unable to detect installation status" + Style.RESET_ALL)
+                quit()
         elif exists == False:
             print(Fore.YELLOW + "Modpack is not installed!" + Style.RESET_ALL)
     except Exception as e:
