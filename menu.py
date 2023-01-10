@@ -39,7 +39,6 @@ def menu_handler():
         elif option == 3:
             uninstall_modpack()
             
-
         elif option == 0:
             print(Fore.GREEN + Style.BRIGHT + "Thank you for using this tool!" + Style.RESET_ALL)
             # playsound('assets/touche.mp3')

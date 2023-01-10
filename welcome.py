@@ -35,6 +35,10 @@ def print_art() :
   print(art2)
   print(Back.GREEN + "Welcome " + get_user_name() + " to the Civilisation V Modpack Installer " + Style.RESET_ALL)
 
+def print_art2() :
+  print(art)
+  
+
 def get_user_name():
   username = os.getlogin().capitalize()
   return username
@@ -52,4 +56,4 @@ def intro_music():
 def generate_welcome():
   clear_screen()
   print_art()
-  intro_music()
+  #intro_music()
