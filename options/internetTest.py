@@ -12,9 +12,6 @@ def ping_google():
     status = response_list.rtt_avg_ms
     return status
 
-def ping_spaldotechoperations():
-    response_list = ping(domains, )
-
 def print_google_results():
     init()
     print("Beginning internet connectivity test...")
