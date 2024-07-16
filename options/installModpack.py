@@ -11,8 +11,8 @@ import winapps
 import os
 import shutil
 
-download_link = r"https://repo.spaldotech.co.uk/Civ/LEKMOD_v31.3.zip"
-admin_url = r"https://repo.spaldotech.co.uk/Civ/LEKMOD_v31.3_IGE.zip"
+download_link = r"https://repo.spaldotechoperations.co.uk/civ/LEKMOD_v31.3.zip"
+admin_url = r"https://repo.spaldotechoperations.co.uk/civ/LEKMOD_v31.3_IGE.zip"
 #file_name = "LEKMOD_v31.3.zip"
 file_name = ''
 admin_file_name = "LEKMOD_v31.3_IGE.zip"
@@ -47,7 +47,7 @@ def get_civ_dir():
             if exists == False:
                 continue
             elif exists == True:
-                print(Fore.GREEN + "Your Civilisation V install directory has been automatically located." + Style.RESET_ALL)
+                #print(Fore.GREEN + "Your Civilisation V install directory has been automatically located." + Style.RESET_ALL)
                 return locationPath
                 break
         except Exception as e:
@@ -55,8 +55,6 @@ def get_civ_dir():
             quit()
 
 def download_modpack():
-    #url = r"https://repo.spaldotech.co.uk/Civ/LEKMOD_V28.zip"
-    
     buffer_size = 1024
     response = requests.get(download_link, stream=True)
     file_size = int(response.headers.get("Content-Length", 0))

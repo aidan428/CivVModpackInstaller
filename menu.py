@@ -1,5 +1,4 @@
-from options.internetTest import print_results
-from options.spaldotechServiceStatus import check_status
+from options.internetTest import print_google_results, print_spaldotechops_results
 from options.installModpack import install_modpack
 from options.uninstallModpack import uninstall_modpack
 from colorama import Fore, Back, Style
@@ -32,8 +31,9 @@ def menu_handler():
         if option == 1:
             #print("\n")
             welcome.clear_screen()
-            print_results()
-            check_status()
+            print_google_results()
+            print_spaldotechops_results()
+            
         elif option == 2:
             install_modpack()
         elif option == 3:
@@ -42,7 +42,6 @@ def menu_handler():
         elif option == 0:
             print(Fore.GREEN + Style.BRIGHT + "Thank you for using this tool!" + Style.RESET_ALL)
             # playsound('assets/touche.mp3')
-            sleep(2)
             quit()
         else:
             print(Fore.RED + 'Invalid option. Please enter a number between 0 and 3.' + Style.RESET_ALL)
